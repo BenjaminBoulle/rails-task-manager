@@ -1,0 +1,13 @@
+<h1>My Taks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task)%>
+    <%= link_to edit_path(task) do %>
+      <i class="fa-regular fa-pen-to-square"></i>
+    <% end %>
+    </li>
+
+  <% end %>
+</ul>
+
+<%= link_to  'Add a new Task', new_path()%>

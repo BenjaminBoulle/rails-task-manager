@@ -1,0 +1,23 @@
+<div class="form">
+  <%= form_with model: @task do |f| %>
+
+  <div class="label">
+    <%= f.label :title %>
+    <%# <div class="control"> %>
+      <%= f.text_field :title %>
+    <%# </div> %>
+  </div>
+
+  <div class="label">
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
+
+  <div class="label">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
+
+    <%= f.submit class: "button-bis"%>
+  <% end %>
+</div>
